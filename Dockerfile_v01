@@ -1,0 +1,25 @@
+FROM resin/raspberrypi3-debian
+MAINTAINER ctc94 <mir948040@naver.com>
+
+RUN echo "Keras & scikit-learn install version"
+
+RUN apt-get update && apt-get install -y \
+        build-essential \
+        libpng-dev \
+        libfreetype6-dev \
+        libhdf5-serial-dev \
+        libzmq3-dev \
+        pkg-config \
+        python \
+        python-dev \
+        libhdf5-dev \
+        python-h5py \
+        python-yaml \
+        python-pip \
+        python3-pip \
+        libblas-dev \
+        liblapack-dev \
+        gfortran \
+        && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
